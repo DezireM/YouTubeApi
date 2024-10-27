@@ -17,5 +17,7 @@ data class Snippet(
     @SerializedName("channelTitle")
     val channelTitle: String,
     @SerializedName("localized")
-    val localized: Localized
+    val localized: Localized,
+    @SerializedName("playlistId")
+    val playlistId: String,
 )

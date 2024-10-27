@@ -50,6 +50,7 @@ abstract class BaseFragment<VB : ViewBinding>(
     protected fun <T> LiveData<Resource<T>>.handleResource(
         isLoading: (Boolean) -> Unit,
         onSuccess: (T?) -> Unit
+        onError: ((String?) -> Unit)? = null
     ) {
         this.observe(viewLifecycleOwner) { resource ->
             isLoading.invoke(resource is Resource.Loading)

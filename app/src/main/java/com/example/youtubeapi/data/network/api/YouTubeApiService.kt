@@ -10,14 +10,16 @@ interface YouTubeApiService {
             @Query("part") part: String,
             @Query("channelId") channelId: String,
             @Query("key") apiKey: String,
-            @Query("maxResults") maxResults: Int
+            @Query("maxResults") maxResults: Int,
+            @Query("pageToken") pageToken: String? = null
         ): BaseResponse
 
         @GET("playlistItems")
-        suspend fun getPlaylistItems(
+        suspend fun getPlaylistDetails(
             @Query("part") part: String,
             @Query("playlistId") playlistId: String,
             @Query("key") apiKey: String,
-            @Query("maxResults") maxResults: Int
+            @Query("maxResults") maxResults: Int,
+            @Query("pageToken") pageToken: String? = null
         ): BaseResponse
 }

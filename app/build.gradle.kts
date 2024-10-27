@@ -78,5 +78,14 @@ dependencies {
     //Koin
     implementation(libs.koin.android)
 
+    // Youtube Player
+    implementation(libs.core)
+
+    // Paging 3
+    implementation(libs.androidx.paging.runtime)
+    implementation (libs.exoplayer)
+
+
+
 
 }

@@ -8,8 +8,9 @@ data class BaseResponse(
     val kind: String,
     @SerializedName("tage")
     val tage: String,
-    @SerializedName("pageInfo")
-    val pageInfo: PageInfo,
     @SerializedName("items")
-    val items: List<Item>
+    val items: List<Item>,
+    val pageInfo: PageInfo,
+    @SerializedName("nextPageToken")
+    val nextPageToken: String?
 )
